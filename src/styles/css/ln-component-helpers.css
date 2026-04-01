@@ -1,0 +1,5 @@
+@layer components {
+    .header-centered {
+        @apply text-center mx-auto max-w-2/3 max-md:max-w-full;
+    }
+}

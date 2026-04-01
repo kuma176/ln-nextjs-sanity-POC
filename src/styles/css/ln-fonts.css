@@ -1,0 +1,102 @@
+/*Lato-light */
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/lato-light-300.woff2") format("woff2");
+    /* Modern Browsers */
+    font-style: normal;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+
+/* Lato-LightItalic */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/lato-lightitalic-300.woff2') format('woff2');
+    /* Modern Browsers */
+    font-style: italic;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+
+/*Lato-Regular-400*/
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/lato-regular-400.woff2") format("woff2");
+    /* Modern Browsers */
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+
+/* Lato-Italic */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/lato-regularitalic-400.woff2') format('woff2');
+    /* Modern Browsers */
+    font-style: italic;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+
+/*Lato-Bold */
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/lato-bold-700.woff2") format("woff2");
+    /* Modern Browsers */
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+
+/* Lato-BoldItalic */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/lato-bolditalic-700.woff2') format('woff2');
+    /* Modern Browsers */
+    font-style: italic;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+
+/*Lato-Black */
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/lato-black-900.woff2") format("woff2");
+    /* Modern Browsers */
+    font-style: normal;
+    font-weight: 900;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+
+/* Webfont: Lato-BlackItalic */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/lato-blackitalic-900.woff2') format('woff2');
+    /* Modern Browsers */
+    font-style: italic;
+    font-weight: 900;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
