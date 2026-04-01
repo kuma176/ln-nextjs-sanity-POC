@@ -1,15 +1,29 @@
+/* LN lato fonts definition */
+@import "../styles/css/ln-fonts.css";
 @import "tailwindcss";
+@import "../styles/css/reboot.css";
+@import "../styles/css/ln-font-sizes.css";
+@import "../styles/css/ln-breakpoints.css";
+@import "../styles/css/ln-grid.css";
+@import "../styles/css/ln-spacing.css";
+@import "../styles/css/ln-typography.css";
+@import "../styles/css/ln-component-helpers.css";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #455A64;
+  --dark-blue: #00172e;
+}
+
+@theme {
+  --font-lato: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --color-dark-blue: var(--dark-blue);
+  --color-blue-gray: #455A64;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,10 +31,4 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,65 +1,89 @@
-import Image from "next/image";
+import Link from "next/link";
+import { type SanityDocument } from "next-sanity";
 
-export default function Home() {
+import { client } from "@/sanity/client";
+import Preheader from "@/components/ui/atoms/Preheader";
+import Heading from "@/components/ui/atoms/Heading";
+import BodyText from "@/components/ui/atoms/BodyText";
+import HiddenElement from "@/components/ui/atoms/HiddenElement";
+import HeadingBlock from "@/components/ui/molecules/HeadingBlock";
+
+const POSTS_QUERY = `*[
+  _type == "post" && defined(slug.current)
+  ] | order(publishedAt desc)[0...12]{
+  _id, 
+  title, 
+  "excerpt": array::join(string::split(pt::text(body), "")[0..100], "") + "...", 
+  slug, 
+  publishedAt,
+  imageurl
+  }`;
+
+const options = { next: { revalidate: 30 } };
+
+export default async function IndexPage() {
+  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="gap-padding container">
+      {/* <h1>Heading one</h1>
+      <h2>Heading two</h2>
+      <h3>Heading three</h3>
+      <h4>Heading four</h4>
+      <h5>Heading five</h5>
+      <h6>Heading six</h6>
+      <BodyText>
+        <a href='#'>Lorem ipsum dolor</a> sit amet consectetur adipisicing elit.
+        Voluptas incidunt rem dolorem asperiores pariatur culpa, dolore expedita
+        corporis vel eos harum. Quibusdam eum rem repudiandae maxime dolore quo,
+        unde explicabo?
+      </BodyText> */}
+
+      <HeadingBlock 
+      hiddenElement={{ tag: "h2", content: "Hidden heading for seo" }} 
+      preheader={{content: "Preheader"}}
+      heading={{tag: "p", content:"Hidden element as h2", variant: "primary"}}
+      bodyText={{tag: "div", content: "Description text lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi tempore saepe officiis, doloremque ecessitatibus id illum expedita nesciunt quos ad autem iste! Quos eligendi accusamus iusto ipsa molestiae pariatur quisquam!"}}
+      >
+      </HeadingBlock>
+
+      <HeadingBlock
+      className="gap-padding" 
+      heading={{tag: "h2", content:"Without hidden element + no preheader", variant: "primary"}}
+      bodyText={{tag: "div", content: "Description text lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi tempore saepe officiis, doloremque ecessitatibus id illum expedita nesciunt quos ad autem iste! Quos eligendi accusamus iusto ipsa molestiae pariatur quisquam!"}}
+      >
+      </HeadingBlock>
+
+      <HeadingBlock
+      className="header-centered"
+      preheader={{content: "Preheader"}}
+      heading={{tag: "h2", content:"Heading block with centered headers", variant: "primary"}}
+      bodyText={{tag: "div", content: "Description text lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi tempore saepe officiis, doloremque ecessitatibus id illum expedita nesciunt quos ad autem iste! Quos eligendi accusamus iusto ipsa molestiae pariatur quisquam!"}}
+      >
+      </HeadingBlock>
+
+      
+      {/* {JSON.stringify(posts)} */}
+      
+      {/* <ul className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-x-0">
+        {posts.map((post) => (
+          <li key={post._id}>
+            <Link
+              className="block rounded-lg border border-gray-200 p-6 shadow-md transition duration-300 ease-in-out hover:shadow-lg [&:has(.cta)_.description]:mb-4 [&:not(:has(.cta))_.description]:mb-0"
+              href={`/${post.slug.current}`}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+              <div className="-mt-6 -mr-6 mb-4 -ml-6">
+                <img src={post.imageurl} alt={post.title} />
+              </div>
+              <p className="preheader">{new Date(post.publishedAt).toLocaleDateString("en-US", {  year: "numeric",  month: "long",  day: "numeric"})}</p>
+
+              <Heading tag="h2" content={post.title}></Heading>
+              <BodyText>{post.excerpt}</BodyText>
+              <span className="cta">Click me</span>
+            </Link>
+          </li>
+        ))}
+      </ul> */}
+    </main>
   );
 }

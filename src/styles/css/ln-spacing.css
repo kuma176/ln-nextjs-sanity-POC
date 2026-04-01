@@ -1,0 +1,9 @@
+@layer components {
+    .gap-padding {
+        @apply pt-20 pb-20 max-md:pt-16 max-md:pb-16;
+    }
+
+    .gap-margin {
+        @apply mt-20 mb-20 max-md:mt-16 max-md:mb-16;
+    }
+}

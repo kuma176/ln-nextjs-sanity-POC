@@ -1,0 +1,40 @@
+@layer base {
+  /* Reboot styles for headings */
+  body {
+    color: var(--foreground);
+    @apply font-lato font-normal bg-white;
+  }
+  h1 {
+    @apply text-6xl font-bold text-dark-blue;
+  }
+
+  h2 {
+    @apply text-5xl font-bold text-dark-blue;
+  }
+
+  h3 {
+    @apply text-4xl font-bold text-dark-blue;
+  }
+
+  h4 {
+    @apply text-3xl font-bold text-dark-blue;
+  }
+
+  h5 {
+    @apply text-2xl font-bold text-dark-blue;
+  }
+
+  h6 {
+    @apply text-xl font-bold text-dark-blue;
+  }
+
+  /* paragraphs */
+
+  p {
+    @apply text-base font-normal mb-4;
+  }
+
+  p a {
+    @apply text-blue-600 underline underline-offset-4;
+  }
+}

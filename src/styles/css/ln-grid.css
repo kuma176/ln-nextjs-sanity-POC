@@ -1,0 +1,33 @@
+.container {
+    max-width: 1312px;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@variant max-3xl {
+    .container {
+        max-width: 1120px;
+    }
+}
+
+@variant max-2xl {
+    .container {
+        max-width: 1032px;
+    }
+}
+
+@variant max-xl {
+    .container {
+        max-width: 100%;
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+    }
+}
+
+@variant max-lg {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

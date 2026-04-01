@@ -1,0 +1,21 @@
+@layer components {
+  .primary-heading {
+    @apply text-dark-blue mb-2 text-5xl font-black max-md:text-4xl;
+  }
+
+  .heading {
+    @apply text-dark-blue mb-4 text-2xl font-bold max-md:text-xl;
+  }
+
+  .description {
+    @apply mb-4 text-base font-normal;
+  }
+
+  .preheader {
+    @apply mb-2 text-blue-gray text-base font-bold;
+  }
+
+  .visually-hidden {
+    @apply absolute overflow-hidden h-[1px] w-[1px] p-0 border-0 whitespace-nowrap [clip:rect(1px,1px,1px,1px)] [clip-path:inset(0_0_99.9%_99.9%)];
+  }
+}
