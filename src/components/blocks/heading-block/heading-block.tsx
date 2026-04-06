@@ -1,10 +1,10 @@
 
 import type { HTMLAttributes, ComponentProps } from "react";
 
-import Preheader from "../atoms/Preheader";
-import HiddenElement from "../atoms/HiddenElement";
-import Heading from "../atoms/Heading";
-import BodyText from "../atoms/BodyText";
+import Preheader from "../preheader/preheader";
+import HiddenElement from "../hidden-element/hidden-element";
+import Heading from "../heading/heading";
+import BodyText from "../body-text/body-text";
 
 interface HeadingBlockProps extends HTMLAttributes<HTMLDivElement> {
 	preheader?: ComponentProps<typeof Preheader>;

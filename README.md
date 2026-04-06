@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Components Folder Instructions
+
+1. **ui** = low-level UI and utility-style reusable components from shadcn framework.
+
+2. **blocks** = reusable content/building pieces ... basically anything not a cms-facing component and not a shadcn component
+
+3. **sections** = larger CMS-facing components
