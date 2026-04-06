@@ -2,11 +2,13 @@ import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 
 import { client } from "@/sanity/client";
-import Preheader from "@/components/ui/atoms/Preheader";
-import Heading from "@/components/ui/atoms/Heading";
-import BodyText from "@/components/ui/atoms/BodyText";
-import HiddenElement from "@/components/ui/atoms/HiddenElement";
-import HeadingBlock from "@/components/ui/molecules/HeadingBlock";
+import HeadingBlock from "@/components/blocks/heading-block/heading-block";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const POSTS_QUERY = `*[
   _type == "post" && defined(slug.current)
@@ -61,6 +63,19 @@ export default async function IndexPage() {
       bodyText={{tag: "div", content: "Description text lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi tempore saepe officiis, doloremque ecessitatibus id illum expedita nesciunt quos ad autem iste! Quos eligendi accusamus iusto ipsa molestiae pariatur quisquam!"}}
       >
       </HeadingBlock>
+
+      {/* <Accordion
+      type="single"
+      collapsible
+      defaultValue="item-1"
+      >
+        {posts.map((post) => (
+          <AccordionItem key={post._id} value={post._id}>
+            <AccordionTrigger>{post.title}</AccordionTrigger>
+            <AccordionContent>{post.excerpt}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion> */}
 
       
       {/* {JSON.stringify(posts)} */}

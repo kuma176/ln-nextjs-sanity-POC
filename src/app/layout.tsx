@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "LexisNexis Sanity Blog",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased"
+      className={cn("h-full antialiased")}
     >
       <body>{children}</body>
     </html>

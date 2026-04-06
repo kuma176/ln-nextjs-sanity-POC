@@ -2,10 +2,10 @@ import { PortableText, type SanityDocument } from "next-sanity";
 import { createImageUrlBuilder, type SanityImageSource } from "@sanity/image-url";
 import { client } from "@/sanity/client";
 import Link from "next/link";
-import Heading from "@/components/ui/atoms/Heading";
-import Preheader from "@/components/ui/atoms/Preheader";
-import BodyText from "@/components/ui/atoms/BodyText";
-import HeadingBlock from "@/components/ui/molecules/HeadingBlock";
+import Heading from "@/components/blocks/heading/heading";
+import Preheader from "@/components/blocks/preheader/preheader";
+import BodyText from "@/components/blocks/body-text/body-text";
+import HeadingBlock from "@/components/blocks/heading-block/heading-block";
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 
