@@ -42,7 +42,6 @@ export default async function PostPage({
           height="310"
         />
       )} */}
-
       {post.imageurl && (
         <div className="media mb-4">
           <img

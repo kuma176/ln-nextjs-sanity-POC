@@ -1,17 +1,12 @@
-import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 
 import { client } from "@/sanity/client";
-import HeadingBlock from "@/components/blocks/heading-block/heading-block";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import Accordion from "@/components/sections/Accordion/Accordion";
+import accordionData from "@/components/sections/Accordion/data/accordion.json";
+import Hero from "@/components/sections/Hero/Hero";
 
 const POSTS_QUERY = `*[
-  _type == "post" && defined(slug.current)
+  _type == "post"
   ] | order(publishedAt desc)[0...12]{
   _id, 
   title, 
@@ -27,7 +22,13 @@ export default async function IndexPage() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
 
   return (
-    <main className="gap-padding container">
+    <>
+	    <Hero />
+
+	    <Accordion data={accordionData} />
+
+    {/* <div className="gap-padding container"> */}
+      {/* {JSON.stringify(posts)} */}
       {/* <h1>Heading one</h1>
       <h2>Heading two</h2>
       <h3>Heading three</h3>
@@ -41,7 +42,7 @@ export default async function IndexPage() {
         unde explicabo?
       </BodyText> */}
 
-      <HeadingBlock 
+      {/* <HeadingBlock 
       hiddenElement={{ tag: "h2", content: "Hidden heading for seo" }} 
       preheader={{content: "Preheader"}}
       heading={{tag: "p", content:"Hidden element as h2", variant: "primary"}}
@@ -62,9 +63,9 @@ export default async function IndexPage() {
       heading={{tag: "h2", content:"Heading block with centered headers", variant: "primary"}}
       bodyText={{tag: "div", content: "Description text lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi tempore saepe officiis, doloremque ecessitatibus id illum expedita nesciunt quos ad autem iste! Quos eligendi accusamus iusto ipsa molestiae pariatur quisquam!"}}
       >
-      </HeadingBlock>
+      </HeadingBlock> */}
 
-      {/* <Accordion
+      {/* <AccordionItemsWrapper
       type="single"
       collapsible
       defaultValue="item-1"
@@ -75,7 +76,7 @@ export default async function IndexPage() {
             <AccordionContent>{post.excerpt}</AccordionContent>
           </AccordionItem>
         ))}
-      </Accordion> */}
+      </AccordionItemsWrapper> */}
 
       
       {/* {JSON.stringify(posts)} */}
@@ -99,6 +100,7 @@ export default async function IndexPage() {
           </li>
         ))}
       </ul> */}
-    </main>
+    {/* </div> */}
+    </>
   );
 }
