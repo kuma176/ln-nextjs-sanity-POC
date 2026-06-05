@@ -8,6 +8,7 @@
 @import "../styles/css/ln-spacing.css";
 @import "../styles/css/ln-typography.css";
 @import "../styles/css/ln-component-helpers.css";
+@import "../styles/css/ln-backgrounds.css";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -53,6 +54,10 @@
   --font-lato: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   --color-dark-blue: var(--dark-blue);
   --color-blue-gray: #455A64;
+  --color-red: #E8171F;
+  --color-blue-light: #EDF2FA;
+  --color-purple-light: #F5F4FB;
+  --color-teal-light: rgba(220, 245, 245, 0.5);
 }
 
 @theme inline {

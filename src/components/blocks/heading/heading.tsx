@@ -19,7 +19,7 @@ export default function Heading({
     variant = "",
     ...rest
 }: HeadingProps) {
-    const Tag = ALLOWED_TAGS.has(tag) ? tag : "h3";
+    const Tag = ALLOWED_TAGS.has(tag) ? tag : "p";
     const classes = [variant === "primary" ? "primary-heading" : "heading",  className].filter(Boolean).join(" ");
     if (content) {
         return <Tag className={classes} dangerouslySetInnerHTML={{ __html: content }} {...rest} />;

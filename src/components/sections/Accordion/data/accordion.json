@@ -1,0 +1,44 @@
+{
+  "accordion": {
+    "class": "",
+    "headingBlock": {
+        "headingElement": "hiddenElement",
+        "preheader": "Preheader",
+        "heading": "Accordion heading",
+        "hiddenHeader": "Accordion hidden heading",
+        "description": "Description text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam."
+    },
+    "items": [
+      {
+        "heading": "First panel heading",
+        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam.",
+        "default": true
+      },
+      {
+        "heading": "Second panel heading",
+        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam.",
+        "default": false
+      },
+      {
+        "heading": "Third panel heading with more content",
+        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam.",
+        "default": false
+      },
+      {
+        "heading": "Fourth panel heading",
+        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "default": false
+      },
+      {
+        "heading": "Fifth panel heading",
+        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi!",
+        "default": false
+      }
+    ],
+    "cta": {
+      "label": "Call to action",
+      "link": "#",
+      "variant": "secondary"
+    }
+  }
+}

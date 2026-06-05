@@ -1,0 +1,11 @@
+@layer components {
+    .bg-lexis-plus-ai-purple-light {
+        @apply bg-purple-light;
+    }
+    .bg-nexis-blue-light {
+        @apply bg-blue-light;
+    }
+    .bg-diligence-teal-light {
+        @apply bg-teal-light;
+    }
+}
