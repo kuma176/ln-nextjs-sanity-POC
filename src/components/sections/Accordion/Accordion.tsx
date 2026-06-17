@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { AccordionProps } from "./Accordion.types";
+import { AccordionSectionData } from "./Accordion.types";
+import { PortableText } from "@portabletext/react";
 import HeadingBlock from "@/components/blocks/heading-block/heading-block";
 import {
     AccordionItemsWrapper,
@@ -13,20 +14,19 @@ import { cn } from "@/lib/utils";
 
 
 
-export default function Accordion({ data }: AccordionProps) {
-    const { accordion } = data;
-    const expandedItemIndex = accordion.items.findIndex((item) => item.default === true);
-    const defaultValue = expandedItemIndex >= 0 ? `item-${expandedItemIndex + 1}` : undefined;
-
+export default function Accordion({ data }: { data: AccordionSectionData }) {
+    const accordion = data;
+    const expandedItemIndex = accordion.items.findIndex((item) => item.opened === "expanded");
+    const defaultValue = expandedItemIndex >= 0 ? `${accordion._key}-${accordion.items[expandedItemIndex]._key}` : undefined;
     return (
         <section className={cn("gap-padding", accordion.class)}>
             <div className="container">
                 <HeadingBlock
-                    hiddenElement={{ content: accordion.headingBlock.hiddenHeader }}
-                    preheader={{ content: accordion.headingBlock.preheader }}
-                    heading={{ content: accordion.headingBlock.heading, variant: "primary" }}
-                    bodyText={{ content: accordion.headingBlock.description }}
-                    headingElement={accordion.headingBlock.headingElement}
+                    hiddenElement={{ content: accordion.headingBlock?.hiddenHeader }}
+                    preheader={{ content: accordion.headingBlock?.preheader }}
+                    heading={{ content: accordion.headingBlock?.heading, variant: "primary" }}
+                    bodyText={{ content: accordion.headingBlock?.description }}
+                    headingElement={accordion.headingBlock?.headingElement}
                 >
                 </HeadingBlock>
                 <AccordionItemsWrapper
@@ -35,16 +35,16 @@ export default function Accordion({ data }: AccordionProps) {
                     defaultValue={defaultValue}
                     className="mt-8"
                 >
-                    {accordion.items.map((item, index) => (
-                        <AccordionItem key={`${item.heading}-${index + 1}`} value={`item-${index + 1}`}>
+                    {accordion.items.map((item) => (
+                        <AccordionItem key={`${accordion._key}-${item._key}`} value={`${accordion._key}-${item._key}`}>
                             <AccordionTrigger>{item.heading}</AccordionTrigger>
-                            <AccordionContent>{item.body}</AccordionContent>
+                            <AccordionContent>{<PortableText value={item.body} />}</AccordionContent>
                         </AccordionItem>
                     ))}
                 </AccordionItemsWrapper>
-                <Button variant={toButtonVariant(accordion.cta.variant)} className="mt-9" asChild>
-                    <Link href={accordion.cta.link}>
-                        {accordion.cta.label}
+                {accordion.cta?.label && <Button variant={toButtonVariant(accordion.cta?.variant)} className="mt-9" asChild>
+                    <Link href={accordion.cta?.link || "#"}>
+                        {accordion.cta?.label}
 
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -53,6 +53,7 @@ export default function Accordion({ data }: AccordionProps) {
                         </svg>
                     </Link>
                 </Button>
+            }
             </div>
         </section>
     );

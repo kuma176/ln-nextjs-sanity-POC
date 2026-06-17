@@ -10,13 +10,13 @@ export function HeadingBlock({
 	hiddenElement,
 	heading,
 	bodyText,
-	headingElement,
+	headingElement = "heading",
 	className = "",
 	...rest
 }: HeadingBlockProps) {
 	const classes = ["heading-block", className].filter(Boolean).join(" ");
 	const hiddenElementTag =
-		headingElement === "hiddenElement"
+		headingElement === "hiddenHeader"
 			? "h2"
 			: hiddenElement?.tag;
 	const preheaderTag =
@@ -26,7 +26,7 @@ export function HeadingBlock({
 	const headingTag =
 		headingElement === "heading"
 			? "h2"
-			: heading?.tag;
+			: "p";
 
 	return (
 		<div className={classes} {...rest}>

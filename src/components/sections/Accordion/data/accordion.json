@@ -1,44 +1,459 @@
 {
-  "accordion": {
-    "class": "",
-    "headingBlock": {
-        "headingElement": "hiddenElement",
-        "preheader": "Preheader",
-        "heading": "Accordion heading",
-        "hiddenHeader": "Accordion hidden heading",
-        "description": "Description text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam."
+  "_key": "accordion-1",
+  "_type": "accordionSection",
+  "class": "",
+  "headingBlock": {
+    "headingElement": "hiddenHeader",
+    "preheader": "Preheader",
+    "heading": "Accordion heading",
+    "hiddenHeader": "Accordion hidden heading",
+    "description": "Description text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam."
+  },
+  "items": [
+    {
+      "_key": "item1",
+      "_type": "object",
+      "body": [
+        {
+          "_key": "b1a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s1a",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Contact Us..."
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_key": "b1c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s1c",
+              "_type": "span",
+              "marks": [],
+              "text": "LexisNexis Academic Relationship Managers make regular visits to Australian universities, consulting lecturers on course materials while keeping bookshops informed about new and forthcoming LexisNexis products."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "b1d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s1d",
+              "_type": "span",
+              "marks": [],
+              "text": "Contact your local representative directly:"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "b1e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s1e1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Galia Adel"
+            },
+            {
+              "_key": "s1e2",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "\nHead of Text WA SA TAS NT"
+            },
+            {
+              "_key": "s1e3",
+              "_type": "span",
+              "marks": [],
+              "text": "\nLevel 3, BGC Centre\n28 The Esplanade\nPerth WA 6000\nDirect: +61488 488 135\nEmail: "
+            },
+            {
+              "_key": "s1e4",
+              "_type": "span",
+              "marks": [
+                "link1"
+              ],
+              "text": "galia.adel@lexisnexis.com.au"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "link1",
+              "_type": "link",
+              "href": "mailto:galia.adel@lexisnexis.com.au"
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_key": "b1f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s1f1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Kiana Pazoki"
+            },
+            {
+              "_key": "s1f2",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "\nRelationship Manager QLD, VIC"
+            },
+            {
+              "_key": "s1f3",
+              "_type": "span",
+              "marks": [],
+              "text": "\nLevel 11, Suite 1101\n239 George Street\nBrisbane QLD 4000\nDirect: +61 435 652 860\nEmail: "
+            },
+            {
+              "_key": "s1f4",
+              "_type": "span",
+              "marks": [
+                "link2"
+              ],
+              "text": "kiana.pazoki@lexisnexis.com.au"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "link2",
+              "_type": "link",
+              "href": "mailto:kiana.pazoki@lexisnexis.com.au"
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_key": "b1g",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s1g1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Dianne Quade"
+            },
+            {
+              "_key": "s1g2",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "\nAcademic Relationship Manager NSW ACT"
+            },
+            {
+              "_key": "s1g3",
+              "_type": "span",
+              "marks": [],
+              "text": "\nTower 2, 475-495 Victoria Ave,\nChatswood NSW 2067\nDirect: +61488 488 094\nEmail: "
+            },
+            {
+              "_key": "s1g4",
+              "_type": "span",
+              "marks": [
+                "link3"
+              ],
+              "text": "dianne.quade@lexisnexis.com.au"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "link3",
+              "_type": "link",
+              "href": "mailto:dianne.quade@lexisnexis.com.au"
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "heading": "Academic Relationship Managers",
+      "opened": "expanded"
     },
-    "items": [
-      {
-        "heading": "First panel heading",
-        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam.",
-        "default": true
-      },
-      {
-        "heading": "Second panel heading",
-        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam.",
-        "default": false
-      },
-      {
-        "heading": "Third panel heading with more content",
-        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi! Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum optio nesciunt, quod impedit debitis a aliquam, exercitationem perspiciatis quo illo sed dolorem accusantium deserunt explicabo aperiam.",
-        "default": false
-      },
-      {
-        "heading": "Fourth panel heading",
-        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        "default": false
-      },
-      {
-        "heading": "Fifth panel heading",
-        "body": "Panel text lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto animi!",
-        "default": false
-      }
-    ],
-    "cta": {
-      "label": "Call to action",
-      "link": "#",
-      "variant": "secondary"
+    {
+      "_key": "item2",
+      "_type": "object",
+      "body": [
+        {
+          "_key": "b2a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s2a",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Publishing Team"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_key": "b2c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s2c1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Catherine Gordon – Commissioning Editor - Digital Learning Content"
+            },
+            {
+              "_key": "s2c2",
+              "_type": "span",
+              "marks": [],
+              "text": "\nPhone: (02) 9422 2829\nFax: (02) 9422 2406\nEmail: "
+            },
+            {
+              "_key": "s2c3",
+              "_type": "span",
+              "marks": [
+                "link4"
+              ],
+              "text": "catherine.gordon@lexisnexis.com.au"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "link4",
+              "_type": "link",
+              "href": "mailto:catherine.gordon@lexisnexis.com.au"
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_key": "b2d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s2d1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Jocelyn Holmes – Commissioning Editor – Academic Texts"
+            },
+            {
+              "_key": "s2d2",
+              "_type": "span",
+              "marks": [],
+              "text": "\nPhone: (02) 9422 2305\nFax: (02) 9422 2431\nEmail: "
+            },
+            {
+              "_key": "s2d3",
+              "_type": "span",
+              "marks": [
+                "link5"
+              ],
+              "text": "Jocelyn.holmes@lexisnexis.com.au"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "link5",
+              "_type": "link",
+              "href": "mailto:Jocelyn.holmes@lexisnexis.com.au"
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_key": "b2e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s2e1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Romi Meyerowitz – Learning Content Development Manager"
+            },
+            {
+              "_key": "s2e2",
+              "_type": "span",
+              "marks": [],
+              "text": "\nPhone: (02) 9422 8733\nFax: (02) 9422 2406\nEmail: "
+            },
+            {
+              "_key": "s2e3",
+              "_type": "span",
+              "marks": [
+                "link6"
+              ],
+              "text": "kim.thomson@lexisnexis.com.au"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "link6",
+              "_type": "link",
+              "href": "mailto:kim.thomson@lexisnexis.com.au"
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "heading": "Publishing Team",
+      "opened": "collapsed"
+    },
+    {
+      "_key": "item3",
+      "_type": "object",
+      "body": [
+        {
+          "_key": "b3a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s3a",
+              "_type": "span",
+              "marks": [],
+              "text": "For General Text, Commercial, Business and Related Enquiries Please Contact:"
+            }
+          ],
+          "markDefs": [],
+          "style": "h5"
+        },
+        {
+          "_key": "b3c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s3c1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Galia Adel"
+            },
+            {
+              "_key": "s3c2",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "\nHead of Text WA SA TAS NT"
+            },
+            {
+              "_key": "s3c3",
+              "_type": "span",
+              "marks": [],
+              "text": "\nLevel 3, BGC Centre\n28 The Esplanade\nPerth WA 6000\nDirect: +61488 488 135\nEmail: "
+            },
+            {
+              "_key": "s3c4",
+              "_type": "span",
+              "marks": [
+                "link7"
+              ],
+              "text": "galia.adel@lexisnexis.com.au"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "link7",
+              "_type": "link",
+              "href": "mailto:galia.adel@lexisnexis.com.au"
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_key": "b3e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s3e",
+              "_type": "span",
+              "marks": [],
+              "text": "For Book Proposals, Content Related or Digital Learning Enquiries Please Contact:"
+            }
+          ],
+          "markDefs": [],
+          "style": "h5"
+        },
+        {
+          "_key": "b3g",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "s3g1",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Susan Seccombe"
+            },
+            {
+              "_key": "s3g2",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "\nManager, Texts & Learning"
+            },
+            {
+              "_key": "s3g3",
+              "_type": "span",
+              "marks": [],
+              "text": "\nPhone: +61 (0)2 9422 8927 Direct\nEmail: "
+            },
+            {
+              "_key": "s3g4",
+              "_type": "span",
+              "marks": [
+                "link8"
+              ],
+              "text": "susan.seccombe@lexisnexis.com.au"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "link8",
+              "_type": "link",
+              "href": "mailto:susan.seccombe@lexisnexis.com.au"
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "heading": "Contacts",
+      "opened": "collapsed"
     }
+  ],
+  "cta": {
+    "label": "Call to action",
+    "link": "#",
+    "variant": "secondary"
   }
 }

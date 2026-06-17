@@ -4,6 +4,7 @@ import { client } from "@/sanity/client";
 import Accordion from "@/components/sections/Accordion/Accordion";
 import accordionData from "@/components/sections/Accordion/data/accordion.json";
 import Hero from "@/components/sections/Hero/Hero";
+import Link from "next/link";
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -25,7 +26,15 @@ export default async function IndexPage() {
     <>
 	    <Hero />
 
-	    <Accordion data={accordionData} />
+	    <section className="gap-padding" style={{ minHeight: "600px" }}>
+        <div className="container">
+          <Link
+              className="text-black-500 underline"
+              href="/en-au/products/nexis/solutions/accordion"
+            >View sanity driven accordion component using Page Builder
+          </Link>
+        </div>
+      </section>
 
     {/* <div className="gap-padding container"> */}
       {/* {JSON.stringify(posts)} */}
