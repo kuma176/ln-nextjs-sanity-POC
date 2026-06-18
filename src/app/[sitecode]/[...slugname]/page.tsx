@@ -8,13 +8,13 @@ const options = { next: { revalidate: 30 } };
 export default async function LocalizedPage({
 	params,
 }: {
-	params: Promise<{ country_locale: string; slugname: string[] }>;
+	params: Promise<{ sitecode: string; slugname: string[] }>;
 }) {
-	const { country_locale, slugname } = await params;
+	const { sitecode, slugname } = await params;
 	const slugPath = slugname.join("/");
 	const page = await client.fetch(
 		pageByLocaleAndSlugQuery,
-		{ country_locale, slugPath },
+		{ sitecode, slugPath },
 		options
 	);
 
@@ -22,5 +22,5 @@ export default async function LocalizedPage({
 		notFound();
 	}
 
-	return <PageBuilder sections={page.sections ?? []} />;
+	return <PageBuilder sections={page.sections ?? []} />
 }
