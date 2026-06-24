@@ -11,10 +11,10 @@ export default async function LocalizedPage({
 	params: Promise<{ sitecode: string; slugname: string[] }>;
 }) {
 	const { sitecode, slugname } = await params;
-	const slugPath = slugname.join("/");
+	const slugPath = sitecode + "/" + (slugname.join("/"));
 	const page = await client.fetch(
 		pageByLocaleAndSlugQuery,
-		{ sitecode, slugPath },
+		{ slugPath },
 		options
 	);
 

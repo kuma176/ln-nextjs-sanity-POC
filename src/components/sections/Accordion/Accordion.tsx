@@ -42,7 +42,7 @@ export default function Accordion({ data }: { data: AccordionSectionData }) {
                         </AccordionItem>
                     ))}
                 </AccordionItemsWrapper>
-                {accordion.cta?.label && <Button variant={toButtonVariant(accordion.cta?.variant)} className="mt-9" asChild>
+                {accordion.cta?.label && <Button variant={toButtonVariant(accordion.cta?.class)} className="mt-9" asChild>
                     <Link href={accordion.cta?.link || "#"}>
                         {accordion.cta?.label}
 

@@ -3,7 +3,6 @@ import { groq } from "next-sanity";
 export const pageByLocaleAndSlugQuery = groq`
   *[
     _type == "page" &&
-    locale == $sitecode &&
     slug.current == $slugPath
   ][0]{
     _id,
